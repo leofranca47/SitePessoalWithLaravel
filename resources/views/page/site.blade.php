@@ -21,6 +21,9 @@
                 <li>
                     <a href="#contact" class="animate">CONTATO</a>
                 </li>
+                <li>
+                    <a href="{{route('project.churrascometro')}}">CHURRASCOMETRO</a>
+                </li>
             </ul>
         </nav>
 
@@ -39,6 +42,9 @@
                         </li>
                         <li>
                             <a href="#contact" class="animate">CONTATO</a>
+                        </li>
+                        <li>
+                            <a href="{{route('project.churrascometro')}}">CHURRASCOMETRO</a>
                         </li>
                     </ul>
                 </li>
