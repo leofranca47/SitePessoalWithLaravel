@@ -1,0 +1,44 @@
+.homeSecom{
+    background-color: white;
+    padding-bottom: 40px;
+}
+.homeSecom .art_home{
+    text-align: center;
+}
+.homhomeSecome .art_home header h1{
+    color: black;
+}
+.homeSecom .art_home p a{
+    color: black !important;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.hidden{
+    display: none;
+}
+
+.container-btn{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-btn .btn{
+    flex-basis: 100%;
+    padding: 10px;
+    margin: 15px;
+    background-color: black;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.container-btn .btn:hover{
+    background-color: rgb(32, 31, 31);
+}
+
+/* 400px */
+@media(max-width: 25em){
+    .logo{
+        width: 100px;
+    }
+}
