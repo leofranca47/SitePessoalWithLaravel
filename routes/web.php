@@ -28,3 +28,4 @@ Route::get('/cms/index', [CmsController::class, 'index'])->name('cms.index');
 Route::put('/cms/{id}', [CmsController::class, 'update'])->name('cms.update');
 Route::get('/cms/{id}/edit', [CmsController::class, 'edit'])->name('cms.edit');
 Route::get('/cms/{id}/show', [CmsController::class, 'show'])->name('cms.show');
+Route::delete('/cms/{id}/delete', [CmsController::class, 'delete'])->name('cms.delete');

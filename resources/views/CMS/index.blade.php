@@ -10,6 +10,7 @@
             <tr>
                 <th scope="col">Imagem</th>
                 <th scope="col">Titulo</th>
+                <th scope="col">Data Criação</th>
                 <th scope="col">Ações</th>
             </tr>
         </thead>
@@ -22,6 +23,7 @@
                         @endif
                     </td>
                     <td>{{ $post->titulo }}</td>
+                    <td>{{ $post->created_at->format('d/m/Y') }}</td>
                     <td>
                         <a href="{{ route('cms.show', $post->id) }}">Visualizar</a> <br>
                         <a href="{{ route('cms.edit', $post->id) }}">Editar</a>
@@ -31,5 +33,9 @@
 
         </tbody>
     </table>
-
+    @if (isset($filters))
+        {!! $posts->appends($filters)->links() !!}
+    @else
+        {!! $posts->links() !!}
+    @endif
 @endsection

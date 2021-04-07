@@ -31,4 +31,9 @@ class Post extends Model
 
         return $results;
     }
+
+    public function getTituloAttribute($value)
+    {
+        return ucfirst($value);
+    }
 }

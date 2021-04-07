@@ -89,4 +89,19 @@ class CmsController extends Controller
         return view('CMS.show', ['post' => $post]);
     }
 
+    public function delete(Post $posts, $id)
+    {
+        $post = $posts::find($id);
+        if (!$post) {
+            return redirect()->back();
+        }
+
+        if ($post->photo && Storage::exists($post->photo)) {
+            Storage::delete($post->photo);
+        }
+
+        $post->delete();
+        return redirect()->route('cms.index');
+    }
+
 }

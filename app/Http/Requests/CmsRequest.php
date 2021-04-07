@@ -23,10 +23,19 @@ class CmsRequest extends FormRequest
      */
     public function rules()
     {
+        $id = $this->segment(2);
+
         return [
-            'titulo' => 'required|max:255',
+            'titulo' => 'required|max:255|unique:posts,titulo,' . $id . ',id',
             'photo' => 'nullable|image',
             'artigo' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'titulo.unique' => 'Esse titulo já existe',
         ];
     }
 }
