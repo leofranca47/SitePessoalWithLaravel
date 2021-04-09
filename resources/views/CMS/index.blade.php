@@ -19,7 +19,7 @@
                 <tr>
                     <td>
                         @if ($post->photo)
-                            <img src="{{ Storage::url("{$post->photo}") }}" alt="{{ $post->titulo }}" width="40px">
+                            <img src="{{ url("/storage/{$post->photo}") }}" alt="{{ $post->titulo }}" width="40px">
                         @endif
                     </td>
                     <td>{{ $post->titulo }}</td>
