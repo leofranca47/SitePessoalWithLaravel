@@ -28,14 +28,17 @@ class CmsRequest extends FormRequest
         return [
             'titulo' => 'required|max:255|unique:posts,titulo,' . $id . ',id',
             'photo' => 'nullable|image',
-            'artigo' => 'required',
+            'artigo' => 'required|min:10',
         ];
     }
 
     public function messages()
     {
         return [
+            'titulo.required' => 'O título é obrigatório',
             'titulo.unique' => 'Esse titulo já existe',
+            'artigo.required' => 'É necessário escrever o artigo',
+            'artigo.min' => 'É obrigatorio digitar um texto completo',
         ];
     }
 }
